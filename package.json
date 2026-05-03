@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check-supabase": "node ../supabase/check-supabase.mjs",
+    "check-supabase": "node scripts/check-supabase.mjs",
     "generate-countries": "node scripts/generate-countries-data.mjs"
   },
   "dependencies": {
