@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="neon" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7FE7FF"/>
+      <stop offset="0.45" stop-color="#2FA9FF"/>
+      <stop offset="1" stop-color="#0A4CFF"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="8" y1="6" x2="24" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D8FFFF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#7CCBFF" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Origami diamond (scoring core) -->
+    <path d="M16 4L26 12L16 28L6 12L16 4Z"
+          fill="url(#fold)" stroke="url(#neon)" stroke-width="1.4"/>
+
+    <!-- Fold lines -->
+    <path d="M16 4V28" stroke="url(#neon)" stroke-width="1"/>
+    <path d="M6 12L16 16L26 12" stroke="url(#neon)" stroke-width="1"/>
+    <path d="M6 12L16 20L26 12" stroke="url(#neon)" stroke-width="1" opacity="0.8"/>
+
+    <!-- Scoring bars (risk levels) -->
+    <rect x="10" y="17" width="2" height="5" rx="0.5" fill="#9AF4FF"/>
+    <rect x="14" y="15" width="2" height="7" rx="0.5" fill="#CFFFFF"/>
+    <rect x="18" y="13" width="2" height="9" rx="0.5" fill="#FFFFFF"/>
+
+  </g>
+</svg>

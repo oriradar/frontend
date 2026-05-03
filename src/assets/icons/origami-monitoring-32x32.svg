@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="neon" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7FE7FF"/>
+      <stop offset="0.5" stop-color="#2FA9FF"/>
+      <stop offset="1" stop-color="#0A4CFF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g stroke="url(#neon)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+
+    <!-- Circular loop (continuous monitoring) -->
+    <path d="M16 5
+             A11 11 0 1 1 15.9 5" />
+
+    <!-- Pulse / scan tick -->
+    <path d="M16 5 L16 9" />
+
+    <!-- Minimal signal line -->
+    <path d="M10 17 L13 14 L16 18 L20 13 L23 16" stroke-width="1.2"/>
+
+  </g>
+</svg>
